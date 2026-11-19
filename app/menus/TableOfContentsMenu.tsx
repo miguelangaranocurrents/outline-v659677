@@ -28,7 +28,9 @@ function TableOfContentsMenu() {
     Infinity
   );
   const headingPrefix =
-    documentContext.document?.getPreference(DocumentPreference.HeadingPrefix) ??
+    documentContext.document?.getPreference?.(
+      DocumentPreference.HeadingPrefix
+    ) ??
     HeadingPrefixStyle.None;
 
   const headingActions = useMemo(() => {
